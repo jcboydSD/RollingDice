@@ -3,8 +3,8 @@ package rollingdice;
 /******************************************************************************
  * RollingDice.java 
  * Programmer: @author jcboyd
- *
- * This program asks for a user's name and then reverses it
+ * Version 2
+ * This program simulates rolling dice and tests for doubles
  *****************************************************************************/
 
 import java.util.Scanner;
