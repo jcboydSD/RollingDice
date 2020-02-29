@@ -16,16 +16,23 @@ public class RollingDice
         Scanner stdIn = new Scanner(System.in);
         //Declarations
         int die1, die2; //values of two dice
+        String playAgainAnswer = "y"; //default is to play again
+
         //Input, Processing, Output
+        System.out.println("Roll Dice by JC Boyd\n");
         System.out.println("Can you roll doubles?");
+
         do
         {
             System.out.print("Press enter to roll the dice:");
             stdIn.nextLine();
             die1 = rollDie(); //call method to generate random number
             die2 = rollDie(); //call method to generate random number
-            printResult(die1, die2); //call method to display messages       
-        } while (die1 != die2);
+            printResult(die1, die2); //call method to display messages  
+            System.out.print("Do you want to play again? (y/n) ");
+            playAgainAnswer = stdIn.nextLine();
+        } while (!playAgainAnswer.equals("n")); // end do-while
+
     } //end main
     
     //*************************************************************************
